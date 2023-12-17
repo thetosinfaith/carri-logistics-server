@@ -10,7 +10,12 @@ import static utils.Mappers.mapCreateAccountResponse;
 import static utils.Mappers.mapCustomer;
 
 public class CustomerService {
-    CustomerRepository customerRepository = new ArrayListRepository() {
+    CustomerRepository customerRepository = new CustomerRepository() {
+        @Override
+        public Customer save(Customer customer) {
+            return customer;
+        }
+    };
 
         public CreateAccountResponse createAccountResponse(CreateAccountRequest createAccountRequest) {
             Customer customer = mapCustomer(createAccountRequest);
@@ -23,3 +28,5 @@ public class CustomerService {
 
 
 }
+
+
