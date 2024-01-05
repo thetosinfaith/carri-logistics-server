@@ -5,7 +5,7 @@ import data.models.Customer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArrayListRepository {
+public class CustomerImplementation {
     public class ArraylistRepo implements CustomerRepository {
         List<Customer> customers = new ArrayList<>();
         int id = 1;

@@ -1,7 +1,6 @@
 package services;
 
 import data.models.Customer;
-import data.repository.ArrayListRepository;
 import data.repository.CustomerRepository;
 import dto.request.CreateAccountRequest;
 import dto.response.CreateAccountResponse;
